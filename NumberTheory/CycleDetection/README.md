@@ -16,7 +16,7 @@ by travelling from V0.
 Applications : 
 Cycle detection problem is applicable in some fields given by
 -   PseudoRandom number generator
--   Pollard-rho algorithm
+-   number-therotic algorithm
 -   collisions in cryptographic hash functions
 -   deadlock detection in DBMS transactions
 
