@@ -19,4 +19,4 @@ on right side, and vice-versa.
 **Applications:**
 - Stable matching is used to assign medical students to their first hospitals.
 - Stable matching is used by CDN to pair every used with a server, based on their
-- proximity. CDN perform matching once in every 10 seconds usually.
+proximity. CDN perform matching once in every 10 seconds usually.
