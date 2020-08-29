@@ -16,22 +16,36 @@ by travelling from V0.
 e.g 
 
 Let F(x) = (x^2)%7,
-        S = {0,1,2,3,4,5,6}
+S = {0,1,2,3,4,5,6}
+
 Let us find sequences for different x0
 
 x0 = 2
+
 x1 = (2*2)%7 = 4
+
 x2 = (4*4)%7 = 2
+
 cycle found x0 == x2
 
+
 x0 = 3
+
 x1 = (3*3)%7 = 2
+
 x2 = (2*2)%7 = 4
+
 x3 = (4*4)%7 = 2
+
 cycle found x1 == x3
 
+
 x0 = 5
+
 x1 = (5*5)%7 = 4
+
 x3 = (4*4)%7 = 2
+
 x4 = (2*2)%7 = 4
+
 cycle found x1 == x4
