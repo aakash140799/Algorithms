@@ -13,6 +13,13 @@ in set S to an vertex in graph G, and there is an edge between Vi -> Vj, iff xj 
 We are given the starting vertex V0, and we need to find a cycle in the directed graph found
 by travelling from V0.
 
+Applications : 
+Cycle detection problem is applicable in some fields given by
+-   PseudoRandom number generator
+-   Pollard-rho algorithm
+-   collisions in cryptographic hash functions
+-   deadlock detection in DBMS transactions
+
 e.g 
 
 Let F(x) = (x^2)%7,
@@ -36,3 +43,4 @@ x1 = (5 \* 5)%7 = 4,
 x2 = (4 \* 4)%7 = 2,
 x3 = (2 \* 2)%7 = 4,
 cycle found x1 == x3
+
