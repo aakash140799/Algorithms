@@ -16,7 +16,7 @@ on right side, and vice-versa.
 
 **Variants:**
 There are quite a number of variants of stable matching given by:
-- Stable Marriage Problem
+- **Stable Marriage Problem**
 
 
     In Perfect Stable Mathcing/Stable Marriage Problem, we are given two set of men and women of equal sizes. Each man has
@@ -24,7 +24,7 @@ There are quite a number of variants of stable matching given by:
     matching.
     
     
-- Stable Matching With Indifference
+- **Stable Matching With Indifference**
 
 
     In Stable Matching With Indifference, we are given two set of men and women of equal sizes. But a man can have weak order
@@ -33,14 +33,14 @@ There are quite a number of variants of stable matching given by:
     partner.
     
     
-- Stable Roommate Matching
+- **Stable Roommate Matching**
     
     
     In Stable Roommate mathcing, (unlike tradition stable matching problem) we are given a single set of even size. We want to find
     a one-to-one complete stable matching in the same set.
 
 
-- Hospital/Resident Problem
+- **Hospital/Resident Problem**
 
 
     In Hospital/Resident Problem, we are given a list of hospitals and doctors(possibly of unequal sizes). Each hospital has a strict
@@ -48,15 +48,23 @@ There are quite a number of variants of stable matching given by:
     want to find a many-to-one stable matching. Note that, some hospitals may be left partially filled or some doctors may be left unmatched.
     
     
-- Hospital/Resident Couple problem
+- **Hospital/Resident Couple problem**
 
 
     Hosiptal/Resident Couple problem is similar to Hospital/Resident Problem, with one extra condition. We are also given a set of
-    pairing of doctors. Two doctors in a pair want to be matched to same hospital.
+    pairing of doctors. Two doctors in a pair always want to be matched to same hospital.
     
     
-- Assignment Matching
-- Matching With Contracts
+- **Assignment Matching**
+
+    The problem instance has a number of agents and a number of tasks. Any agent can be assigned to perform any task, incurring some cost that may vary depending on the agent-task assignment. It is required to perform as many tasks as possible by assigning at most one agent to each task and at most one task to each agent, in such a way that the total cost of the assignment is minimized.
+    
+    
+- **Matching With Contracts**
+
+
+    Yet to be added
+
 
 **Applications:**
 - Stable matching is used to assign medical students to their first hospitals.
