@@ -1,13 +1,10 @@
 /*
     Algorithm : Gale Shapely Algorithm
-    This algorithm solves stable matching problem for conditions
-    1   when each person on left side is matched with exactly one person right side and vice-versa.
-    2   There are n number of person on both sides.
+    This algorithm solves perfect stable mathcing problem.
     
     Theory:
         Each person on left side propose person on right side to pair up with them, in order of their
         preference list. Each person of right side accepts the proposal if it is more preferable to them.
-        
         Let us see how this intiution solves 1) Stable matching 2) complete matching
         
         Stable matching
@@ -17,8 +14,7 @@
             2)  l1 is willing to pair up with r2.
             3)  r2 is also willing to pair up with l1
             To form an unstable matching, all three conditions must be satisfied.
-            
-            
+                
             To see how algorithm provides a stable matching.
             Let us condsider the mathcing M found after running the algorithm.
             
@@ -42,6 +38,8 @@
                 1) Since every person on left side is paired with exactly one person.
                 2) There are equal number of person on both sides.
             Every person on both sides must be paired up.
+            
+            
     
     Algorithm:
         make a queue
@@ -56,9 +54,13 @@
                     add unpaired person to queue
                 else
                     continue
+                    
+                    
 
     Time Complexity: O(n^2)
     Space Complexity : O(n^2)
+    
+    
     
     Note : In this algorithm, the proposing sides gets best pairing they can have, while proposed
     side gets the worst match they can have i.e left side gets their best right match, while right
