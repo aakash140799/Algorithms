@@ -1,8 +1,8 @@
-Problem:    Stable Matching problem
+**Problem:    Stable Matching problem**
 
-We are given a left set of people of size n, and a right set of people of same size. Each person has a preference list for
-people on other side. We want to pair each left person with a right person such that we find a complete stable matching.
-To understand a complete stable matching, let us focus on a few points
+The Stable Matching problem is given by, we are given two sets of people : left set and right set. We want
+to match people from left set to people in right set, such that we find a Complete Stable matching. To understand complete
+stable matching, let us focus on few points.
 
 **Unstable pairing:**
 let (l1,r1), (l2, r2) be two pairs of men and women, that are matched to each other.
@@ -15,7 +15,7 @@ A matching is complete, if every person on left side is paired with at least one
 on right side, and vice-versa.
 
 **Variants:**
-There are quite a number of variantes of stable matching problems, each given by
+There are quite a number of variants of stable matching given by:
 - Perfect Stable Matching
 - Stable Matching With Indifference
 - Stable Roommate Matching
