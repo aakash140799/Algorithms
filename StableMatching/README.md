@@ -14,7 +14,15 @@ In a stable matching, there should be no unstable pairing.
 A matching is complete, if every person on left side is paired with at least one person
 on right side, and vice-versa.
 
-**NOTE: One person is matched with only one person**
+**Variants:**
+There are quite a number of variantes of stable matching problems, each given by
+- Perfect Stable Matching
+- Stable Matching With Indifference
+- Stable Roommate Matching
+- Many-to-One Matching
+- Many-to-Couple Matching
+- Assignment Matching
+- Matching With Contracts
 
 **Applications:**
 - Stable matching is used to assign medical students to their first hospitals.
