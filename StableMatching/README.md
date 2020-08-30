@@ -73,7 +73,8 @@ There are quite a number of variants of stable matching given by:
 proximity. CDN perform matching once in every 10 seconds usually.
 
 
-**Refers**
+**Refering:**
+
 For complete information, you may want to see
 -   College Admissions and the stability of marriage
 -   Algorithms Design
