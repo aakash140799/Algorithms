@@ -16,11 +16,40 @@ on right side, and vice-versa.
 
 **Variants:**
 There are quite a number of variants of stable matching given by:
-- Perfect Stable Matching
+- Stable Marriage Problem
+
+    In Perfect Stable Mathcing/Stable Marriage Problem, we are given two set of men and women of equal sizes. Each man has
+    a strict order of preference for the set of women, same goes for every women. We want to find a one-to-one complete stable
+    matching.
+    
+    
 - Stable Matching With Indifference
+
+    In Stable Matching With Indifference, we are given two set of men and women of equal sizes. But a man can have weak order
+    of preference of the set of women. Such that he is indifferent between some subset of women, Same goes for women. in such
+    a case, we can find a one-to-one complete weak-stable matching, such that no (men, women) strictly prefer each other over their
+    partner.
+    
+    
 - Stable Roommate Matching
-- Many-to-One Matching
-- Many-to-Couple Matching
+    
+    In Stable Roommate mathcing, (unlike tradition stable matching problem) we are given a single set of even size. We want to find
+    a one-to-one complete stable matching in the same set.
+
+
+- Hospital/Resident Problem
+
+    In Hospital/Resident Problem, we are given a list of hospitals and doctors(possibly of unequal sizes). Each hospital has a strict
+    order of preference for the set of doctors, same goes for doctors. Each hospital has a limited number of seats to accomodate. We
+    want to find a many-to-one stable matching. Note that, some hospitals may be left partially filled or some doctors may be left unmatched.
+    
+    
+- Hospital/Resident Couple problem
+
+    Hosiptal/Resident Couple problem is similar to Hospital/Resident Problem, with one extra condition. We are also given a set of
+    pairing of doctors. Two doctors in a pair want to be matched to same hospital.
+    
+    
 - Assignment Matching
 - Matching With Contracts
 
