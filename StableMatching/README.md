@@ -71,3 +71,10 @@ There are quite a number of variants of stable matching given by:
 - Stable matching is used to assign medical students to their first hospitals.
 - Stable matching is used by CDN to pair every used with a server, based on their
 proximity. CDN perform matching once in every 10 seconds usually.
+
+
+**Refers**
+For complete information, you may want to see
+-   College Admissions and the stability of marriage
+-   Algorithms Design
+-   An efficient algorithms for "Stable roommate" problem
