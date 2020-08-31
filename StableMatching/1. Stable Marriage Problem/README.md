@@ -2,12 +2,11 @@
 
 Stable marriage problem is given by, we are given two set of people of **equal size**. Each person in one set has **strict order of 
 preference** for every person in other set. We want to match each person from left side to **exactly one** person on right side and vice-versa. We want to find a complete stable matching.
-    
-**Algorithm : Gale Shapely Algorithm**
-
-This algorithm solves stable marriage problem.
-    
-    
+   
+   
+**Solved by : Gale Shapely Algorithm**
+   
+   
 **Theory:**
     
 Each person on left side propose people on right side one-by-one, in order of their preference list.
@@ -52,7 +51,6 @@ Let us see how this intiution solves 1) Stable matching 2) complete matching
     Every person on both sides must be paired up.
 
 
-
 **Algorithm:**
 
     make a queue
@@ -74,10 +72,12 @@ Let us see how this intiution solves 1) Stable matching 2) complete matching
 
 **Space Complexity : O(n^2)**
 
+
 **Note:**
     
 In this algorithm, the proposing sides gets best pairing they can have, while proposed
 side gets the worst pairing they can have i.e algorithm is **proposer-favoring** and **proposed-permisive**.
+
 
 **Refer:**
 
