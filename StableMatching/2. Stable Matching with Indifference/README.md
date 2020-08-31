@@ -7,7 +7,7 @@ given by.
     
     
     
--**Weakly Stable Matching**
+- **Weakly Stable Matching**
     
 A matching is weakly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **strictly prefers**
 r2 over r1, and r2 **stricly prefers** l1 over l2. The original GaleShapley algorithms can be used to find a
@@ -15,7 +15,7 @@ weakly stable matching by breaking indifferent ties arbitrarly.
     
     
     
--**Strongly Stable Matching**
+- **Strongly Stable Matching**
 
 A matching is strongly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **strictly prefers**
 r2 over r1, and r2 **strictly or equally prefers** l1 over l2. Unlike stable marriage problem, it is possible that a strongly stable matching **may not exist**. 
@@ -23,7 +23,7 @@ The original GaleShaply algorithm can by modified to find such a matching, if it
     
     
     
--**Super Stable Matching**
+- **Super Stable Matching**
 
 A matching is super stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **stricly or equally
 prefers** r2 over r1, and r2 **stricly or equally prefers** l1 over l2. Unlike stable marriage problem, it is possible
