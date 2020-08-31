@@ -1,27 +1,28 @@
 **Problem : Stable Marriage problem with Indifference**
 
-Given two sets of person of **equal size**. We want to match each person on left set to exactly one person
+Given two sets of person of **equal size**. We want to match each person on left set to **exactly one person**
 to right set, to get a complete stable matching. Unlike traditional stable marriage, a person is allowed to
 prefer one or more persons equally. This notion of indifference creates three notions of stable matching
-given by
+given by.
     
 **Weakly Stable Matching**
     
-A matching is weakly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 strictly prefer
-r2 over r1, and r2 stricly prefer l1 over l2. The original GaleShaply algorithms can be used to find a
+A matching is weakly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **strictly prefers**
+r2 over r1, and r2 **stricly prefers** l1 over l2. The original GaleShaply algorithms can be used to find a
 weakly stable matching by breaking indifferent ties arbitrarly.
     
 **Strongly Stable Matching**
 
-A matching is strongly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 strictly prefer
-r2 over r1, and r2 strictly or equally prefer l1 over l2. The original GaleShaply algorithm can by modified to find such
-a matching, if it exists.
+A matching is strongly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **strictly prefers**
+r2 over r1, and r2 **strictly or equally prefers** l1 over l2. Unlike stable marriage problem, it is possible that a strongly stable matching **may not exist**. 
+
+The original GaleShaply algorithm can by modified to find such a matching, if it exists.
     
 **Super Stable Matching**
 
-A matching is super stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 stricly or equally
-prefers r2 over r1, and r2 stricly or equally prefers l1 over l2. Unlike stable marriage problem, it is possible
-that a super stable matching may not exist.
+A matching is super stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **stricly or equally
+prefers** r2 over r1, and r2 **stricly or equally prefers** l1 over l2. Unlike stable marriage problem, it is possible
+that a super stable matching **may not exist**.
 
 We can modify GaleShaply algorithms such that it checks for super-stable matching, and outputs one if it exits
     
