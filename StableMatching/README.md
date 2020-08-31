@@ -18,15 +18,14 @@ There are quite a number of variants of stable matching given by:
 - **Stable Marriage Problem**
 
 
-    Stable marriage problem is given by, we are given two set of people of **equal size**. Each person in one set has strict order of 
-    preference for every person in other set. We want to match from left side to **exactly one** person on right side and vice-versa.
-    We want to find a complete stable matching.
+    Stable marriage problem is given by, we are given two set of people of **equal size**. Each person in one set has **strict order of 
+    preference** for every person in other set. We want to match each person from left side to **exactly one** person on right side and vice-versa. We want to find a complete stable matching.
     
     
 - **Stable Marriage With Indifference**
 
-    Stable Marriage is given by, we are given a stable marriage problem, but unlike tradition stable marriage, a person can prefer two
-    or more persons equally.Such condition is called *Indifference*.
+    Stable Marriage is given by, we are given a stable marriage problem, but unlike tradition stable marriage, a person can prefer **two
+    or more persons equally**. Such a condition is called *Indifference*.
     
 - **Stable Roommate Matching**
     
