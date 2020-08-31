@@ -56,7 +56,7 @@ We can modify GaleShapley algorithms such that it checks for super-stable matchi
 
 **Algorithm:**
 
-*Weakly Stable Matching*
+*Weakly Stable Matching:*
 same as stable marriage with modified preferences.
 
 *Super Stable Matching*
