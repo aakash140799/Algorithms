@@ -1,17 +1,16 @@
 **Problem:    Stable Matching problem**
 
-The Stable Matching problem is given by, we are given two sets of people : left set and right set. We want
-to match people from left set to people in right set, such that we find a Complete Stable matching. To understand complete
-stable matching, let us focus on few points.
+The Stable Matching problem is given by, we are given two sets of objects. Each object in one set has preferences for objects over other set.
+We want to match objects from one set to other set, similar to a bipartite graph, such that the matching is a complete stable matching. To understand complete stable matching, let us understand unstable pairing and complete matching.
 
 **Unstable pairing:**
-let (l1,r1), (l2, r2) be two pairs of men and women, that are matched to each other.
+let (l1,r1), (l2, r2) be two pairs of object from matching, that are matched to each other.
 consider the condition that l1 prefers r2 over r1, and r2 prefers l1 over l2. In
-such condition, both will be willing to pair with each other, which forms an unstability.
+such condition, l1 and r2 both will be willing to pair with each other, which forms an unstability.
 In a stable matching, there should be no unstable pairing.
 
 **Complete matching:**
-A matching is complete, if every person on left side is paired with at least one person
+A matching is complete, if every object on left side is paired with at least one object
 on right side, and vice-versa.
 
 **Variants:**
@@ -19,25 +18,20 @@ There are quite a number of variants of stable matching given by:
 - **Stable Marriage Problem**
 
 
-    In Perfect Stable Matching/Stable Marriage Problem, we are given two set of men and women of equal sizes. Each man has
-    a strict order of preference for the set of women, same goes for every women. We want to find a one-to-one complete stable
-    matching.
+    Stable marriage problem is given by, we are given two set of people of **equal size**. Each person in one set has strict order of 
+    preference for every person in other set. We want to match from left side to **exactly one** person on right side and vice-versa.
+    We want to find a complete stable matching.
     
     
-- **Stable Matching With Indifference**
+- **Stable Marriage With Indifference**
 
-
-    In Stable Matching With Indifference, we are given two set of men and women of equal sizes. But a man can have weak order
-    of preference for the set of women. Such that he is indifferent between some subset of women, Same goes for women. in such
-    a case, we can find a one-to-one complete weak-stable matching, such that no (men, women) strictly prefer each other over their
-    partner.
-    
+    Stable Marriage is given by, we are given a stable marriage problem, but unlike tradition stable marriage, a person can prefer two
+    or more persons equally.Such condition is called *Indifference*.
     
 - **Stable Roommate Matching**
     
     
-    In Stable Roommate mathcing, (unlike tradition stable matching problem) we are given a single set of even size. We want to find
-    a one-to-one complete stable matching in the same set.
+    
 
 
 - **Hospital/Resident Problem**
