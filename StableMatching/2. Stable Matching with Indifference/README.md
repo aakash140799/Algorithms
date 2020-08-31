@@ -45,67 +45,77 @@ We can modify GaleShapley algorithms such that it checks for super-stable matchi
     li by order of their rank, then by their person number. Such that among ri having equall rank, ri having lower person number
     is more preferable and so on.
     
+-   *Super Stable Matching*
+
+    The proposal sequence proceeds in the usual way, except that a free man who has two or more women tied at the head of his current list proposes to all of them simultaneously. When a woman receives a proposal, all men strictly inferior to the proposer are deleted from her list, and she from theirs, but she may hold more than one proposal if the men in question are tied in her list. The proposal sequence may terminate with one or more of the men’s lists empty, in which case no super-stable matching exists. Otherwise, each man will be engaged to one or more women, and the fiancC(e)s of any multiply engaged person must be tied in his/her list. As we will show, no woman who is multiply engaged at this point can have a super-stable partner from among any of her fiances, nor from among any men who may be tied with them in her list. So all such pairs may be deleted and the proposal sequence re-activated. The whole process is repeated until it produces a one-one engagement mapping, which will be a super-stable matching, or until some man’s list becomes empty, indicating that no super-stable matching is possible.
+    
+
 -   *Strongly Stable Matching*
 
-    
-    Each person on left side propose people on right side one-by-one, in order of their preference list.
-    Person of right side accepts/rejects the proposal if it is more preferable to them than his current proposal.
-    After every person on left side and right side have a pairing, we get a complete stable matching.
-    
-    Let us see how this intiution solves 1) Stable matching 2) complete matching
-
-    Stable matching
-        To see how an unstable matching be formed, let us consider the conditions that form
-        an unstable matching.
-        1)  there are two pairs (l1, r1), (l2, r2).
-        2)  l1 is willing to pair up with r2.
-        3)  r2 is also willing to pair up with l1
-        To form an unstable matching, all three conditions must be satisfied.
-
-        To see how algorithm provides a stable matching.
-        Let us condsider the mathcing M found after running the algorithm.
-
-        consider any person li on left side set who is paired up with person ri.
-        let us see how li is paired with ri.
-
-        1) Acc. to algorithm, li must have proposed all rj being more preferable(to li)
-        than ri. Since li is not paired with any such rj, then all such rj must have
-        accepted a more preferable(to rj) lj.
-        Hence rj are not willing to pair with li, condition 3 fails.
-
-        2) Acc. to algorithm, li did not proposed all rj being lower preferable(to li)
-        than ri.
-        Hence li is not willing to pair with any such rj, condition 2 fails.
-
-        Hence in matching M, for every pairing, either codition 2 or 3 fails, so
-        unstable matching is found.
-
-    Compelte Mathcing
-        Let us consider matching M found after running the algorithm
-            1) Since every person on left side is paired with exactly one person.
-            2) There are equal number of person on both sides.
-        Every person on both sides must be paired up.
-
-
+    Each proposal sequence proceeds, as in the super-stable case, until some man’s list becomes empty, in which case there can be no strongly stable matching, or until all the men are engaged. In the latter case, if the bipartite graph representing the engaged pairs contains a perfect matching-i.e., if all the men and women can be paired off on a one-one basis with a fiance(e)-then the resulting matching is strongly stable.
 
 **Algorithm:**
 
+*Weakly Stable Matching*
+same as stable marriage with modified preferences.
+
+*Super Stable Matching*
+
     make a queue
-    add all free left person in queue
+    add all left person li in queue
 
     while queue is not empty
-        front person proposes its top unproposed person
-            if right person is unpaired
-                pair them up
-            if right person is paired, but prefers front more
-                pair them up
-                add unpaired person to queue
-            else
-                continue
+        li := queue.front
+        for each ri in li's top preference:
+            if ri is free:
+                create pair(li, ri)
+            elif ri is paired with lj having lower preference than li
+                create pair(li, ri)
+                delete all pair(lj, ri) such that lk is lower prefered
+                if lj is free, add to queue
+    
+    if all li's and ri's are single paired
+        return the stable matching
+    elif some li have empty preference list
+        return no matching found
+    else
+        for each li:
+            if li is muliple paired
+                delete all pair(li, rj)
+        for each ri:
+            if ri is multiple paired
+                delete all pair(lj, ri)
+        repeat
 
+
+*Strongly Stable Matching*
+
+    make a queue
+    add all left person li in queue
+    
+    while queue is not empty
+        li := queue.front
+        for each ri in li's top preference:
+            if ri is free:
+                create pair(li, ri)
+            elif ri prefers li:
+                create pair(li, ri)
+                delete all pair(lj, ri), such that lj is lower prefered
+                if lj is free, add to queue
+        
+    if bipartite graph given by engagements of l and r set have a perfect matching
+        return perfect matching
+    elif some li have empty preference list
+        return no strongly stable matching
+    else
+        find critical section in bipartite graph
+        delete all pair in critical section
+        repeat
 
 
 **Time Complexity: O(n^2)**
+
+
 **Space Complexity : O(n^2)**
 
 
@@ -115,6 +125,7 @@ We can modify GaleShapley algorithms such that it checks for super-stable matchi
 In this algorithm, the proposing sides gets best pairing they can have, while proposed
 side gets the worst pairing they can have i.e algorithm is **proposer-favoring** and **proposed-permissive**.
     
+    
 **Refer:**
 
-To know more, please go through the original paper - *college admission and the stability of marriage*
+To know more, please go through the original paper - *Stable marriage and Indifference*
