@@ -19,7 +19,7 @@ weakly stable matching by breaking indifferent ties arbitrarly.
 
 A matching is strongly stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **strictly prefers**
 r2 over r1, and r2 **strictly or equally prefers** l1 over l2. Unlike stable marriage problem, it is possible that a strongly stable matching **may not exist**. 
-The original GaleShaply algorithm can by modified to find such a matching, if it exists.
+The original GaleShapley algorithm can by modified to find such a matching, if it exists.
     
     
     
@@ -28,25 +28,24 @@ The original GaleShaply algorithm can by modified to find such a matching, if it
 A matching is super stable, if we can't find two pairs (l1, r1), (l2, r2) in matching M such that l1 **stricly or equally
 prefers** r2 over r1, and r2 **stricly or equally prefers** l1 over l2. Unlike stable marriage problem, it is possible
 that a super stable matching **may not exist**.
-We can modify GaleShaply algorithms such that it checks for super-stable matching, and outputs one if it exits
+We can modify GaleShapley algorithms such that it checks for super-stable matching, and outputs one if it exits
     
     
     
     
-**Algorithm : modified Gale Shapely Algorithm**
+**Solved by : modified Gale Shapeley Algorithm**
 
-    This algorithm solves stable marriage problem with indifference for three notion of stability.
-    
-    
+  
+  
 **Theory:**
 
--   Weakly Stable Matching
+-   *Weakly Stable Matching*
 
-    We can run a noraml GaleShaply algorithm. To break ties for given person li, we can rank each ri in preference list of
+    We can run a noraml GaleShapley algorithm. To break ties for given person li, we can rank each ri in preference list of
     li by order of their rank, then by their person number. Such that among ri having equall rank, ri having lower person number
-    if more preferable and so on.
+    is more preferable and so on.
     
--   Strongly Stable Matching
+-   *Strongly Stable Matching*
 
     
     Each person on left side propose people on right side one-by-one, in order of their preference list.
