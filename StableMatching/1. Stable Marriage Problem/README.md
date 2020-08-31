@@ -77,9 +77,8 @@ Let us see how this intiution solves 1) Stable matching 2) complete matching
 **Note:**
     
 In this algorithm, the proposing sides gets best pairing they can have, while proposed
-side gets the worst pairing they can have i.e left side gets their best right match, while right
-side gets their worst left match.
+side gets the worst pairing they can have i.e algorithm is **proposer-favoring** and **proposed-permisive**.
 
 **Refer:**
 
-    To know more, please go through the original paper - *college admission and the stability of marriage*
+To know more, please go through the original paper : *college admission and the stability of marriage*
