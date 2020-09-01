@@ -27,7 +27,7 @@ There are quite a number of variants of stable matching given by:
     
 - **Stable Roommate Matching**
     
-    In a given instance of the stable-roommates problem (SRP), each of 2n participants ranks the others in strict order of preference. A matching is a set of n disjoint pairs of participants. A matching M in an instance of SRP is stable if there are no two participants x and y, each of whom prefers the other to their partner in M. Such a pair is said to **block** M, or to be a **blocking pair** with respect to M.
+    In a given instance of the stable-roommates problem (SRP), we are given a **single set** of **even size**. each of 2n participants ranks the others in strict order of preference. A matching is a set of n disjoint pairs of participants. A matching M in an instance of SRP is stable if there are no two participants x and y, each of whom prefers the other to their partner in M. Such a pair is said to **block** M, or to be a **blocking pair** with respect to M.
     
 - **Hospital/Resident Problem**
 
