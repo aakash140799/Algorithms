@@ -1,4 +1,4 @@
-##**Problem : Stable Roommate Problem**
+**Problem : Stable Roommate Problem**
 
 stable-roommate problem is the problem of finding a stable matching for an **even-sized** set. A matching is a separation of the set into disjoint pairs ("roommates"). The matching is stable if there are no two elements which are not roommates and which both prefer each other to their roommate under the matching. This is distinct from the stable-marriage problem in that the stable-roommates problem allows matches between any two elements in **same set**, not just between classes of "men" and "women". 
 
@@ -7,9 +7,9 @@ It is commonly stated as:
 
 In a given instance of the stable-roommates problem (SRP), each of 2n participants ranks the others in strict order of preference. A matching is a set of n disjoint pairs of participants. A matching M in an instance of SRP is stable if there are no two participants x and y, each of whom prefers the other to their partner in M. Such a pair is said to **block** M, or to be a **blocking pair** with respect to M.
 
-##**Solved By : Algorithm given by Robert. W. Irving**
+**Solved By : Algorithm given by Robert. W. Irving**
 
-#**Theory:**
+**Theory:**
 
 The algorithm breaks down naturally into two phases.
 
@@ -33,20 +33,25 @@ The algorithm terminates with
 1)  either all having one proposal from someone else.
 2)  one having his preference list emptied.
 
-if condition 2 is met, col1 says we can not have any stable matching.
+**if condition 2 is met, col(1) says we can not have any stable matching.**
 
 
 col2. *if at any stage of proposal, x proposes to y, then*
 - *x can not have a better partner than y.*
+    
+        direcly implied from col(1), since x must have been rejected be all his first preferences, before he could propose
+        to y.
+        
 - *y can not have a inferior partner than x.*
-    Let we have a stable matching M, in which (y, z) are paired, and y prefer x to z. since by col2.1, x also
-    prefer y to his current partner, we have a unstable pairing, because x and y both prefer each other over their
-    current partners.
+    
+        Let we have a stable matching M, in which (y, z) are paired, and y prefer x to z. since by col2.1, x also
+        prefer y to his current partner, we have a unstable pairing, because x and y both prefer each other over their
+        current partners.
 
 col3. *if after first stage every person end up holding a proposal, then preference list of y,
 who holds a proposal from x , can be reduced using*
-- *delete all who are inferior than x.*
-- *delete all who hold a better proposal than y can offer to them.*
+- *delete all person who are inferior than x.*
+- *delete all person who hold a better proposal than y can offer to them.*
 - *y is first on x's list and x is last on y's list.*
 - *if a appears on b's list, then b appears on a's list.*
 
@@ -56,14 +61,14 @@ we have found a stable matching.*
     To prove that, let us consider person x. y is the sole person on x's list. Now (x, y) is always
     a stable pair and belongs to some matching M. 
 
-    - Let y prefers w over x, but since w is not on y's preference list, w must have rejected y explicitly
+    Let y prefers w over x, but since w is not on y's preference list, w must have rejected y explicitly
     or implicitly through col(3.2). By col(1) (y, w) can't be paired.
 
-    - Let some z prefer y over his current pair. but since z is not present on y's list, y must have rejected
+    Let some z prefer y over his current pair. but since z is not present on y's list, y must have rejected
     z explicitly or implicitly through col(3.1). By col(1) (y, z) can't be paired.
 
 
-**#Second Phase**
+**Second Phase**
 
 Let us assume, after performing reduction from first phase, we get some person x whose preference list
 contains more than one person. In such case, we need to find whether a stable matching is feasible or not.
@@ -71,21 +76,18 @@ Let us give a list reduction operation to furthur reduce the size of preference 
 
 *Reduction Operation*
 
-    - find a cycle a1, a2, a3, a4, ..., an and b1, b2, b3, ..., b4 such that 
-    1 for each bi, bi is second on ai-1's list and first on ai's list. For b1, b1 is second on an's list, first on a1's list. We
-    call such a cycle a *all or none cycle*.
+    find a cycle a1, a2, a3, a4, ..., an and b1, b2, b3, ..., b4 such that 
+        -for each bi, bi is second on ai-1's list and first on ai's list. For b1, b1 is second on an's list, first on a1's list. We
+        call such a cycle a "all or none cycle".
 
-    2 we can represet such all or none cycle such as
-    b1  b2   b3   b4    ...     bn   a1     
-    ^  / ^  / ^  / ^             ^  / ^
-    | /  | /  | /  |             | /  |
-    a1   a2   a3   a4   ...     an   a2
-    
-    where ai -> bi, means a1 is proposing bi, and ai -- bi means bi lies second on ai's preference list.
+        -we can represet such all or none cycle such as
+        b1  b2   b3   b4    ...     bn   a1     
+        ^  / ^  / ^  / ^             ^  / ^
+        | /  | /  | /  |             | /  |
+        a1   a2   a3   a4   ...     an   a2
+        where ai -> bi, means ai is proposing bi, and ai -- bi means bi lies second on ai's preference list.
 
-    - Force all bi to reject their current proposal from ai's, forcing them to propose their second preference.
-    
-    To understand Col4.1, Col4.2, let us understand Lemma3 give by
+    Force all bi to reject their current proposal from ai's, forcing them to propose their second preference bi+1.
 
 Lemma3.1. *in a stable matching M contained in the reduced preference list, either all (ai, bi)
 are partners or none is for all i.*
@@ -94,27 +96,29 @@ Lemma3.2. *if there is such a stable matching in (ai, bi) are partners, then the
 they are not.*
 
     To prove Lemma3.1, let (ai, bi) are partner in some stable matching. 
-    1. since ai is proposing bi, by Col3.3, ai must be last on bi's preference list. 
-    2. since bi is second on ai-1's preference list, by Col3.4, bi's preference list must contains ai-1.
-    3. by 1, bi prefer ai-1 over ai. To keep the matching stable, ai-1 must be partners with bi-1, since ai-1
-       prefer only bi-1 over bi.
+    1. since ai is proposing bi, by Col(3.3), ai must be last on bi's preference list. 
+    2. since bi is second on ai-1's preference list, by Col(3.4), bi's preference list must contains ai-1.
+    3. by (1), bi prefer ai-1 over ai. To keep the matching stable, ai-1 must be partners with bi-1, since ai-1
+       prefer only bi-1 over bi, ai-1 must be paired with bi-1 only.
     4. hence following the arguments, all (ai, bi) must be paired
 
-    - Let A = {a1, ..., an} and B = {b1, ..., bn}. If A ^ B != NULL, then there is some ak == bj, then
-    it is impossible for ak to have its first preference, then by lemma3.1, A ^ B != NULL, implies that
+    Let A = {a1, ..., an} and B = {b1, ..., bn}. If A ^ B != NULL, then there is some ak == bj, then
+    it is impossible for ak to have its first preference, then by lemma(3.1), A ^ B != NULL, implies that
     none of ai and bi can be partners, so we may assume that A ^ B == NULL.
 
-    - Suppose that M is a stable matching, in which all ai and bi are partners. Let us consider matching M'
+    Suppose that M is a stable matching, in which all ai and bi are partners. Let us consider matching M'
     in which all ai are partnered with bi+1
-    1 Clearly each person in B obtain a better person, since ai was last on their preference list. Only person
-    having worse partners are in A, hence instability if exists must be in A.
+        Clearly each person in B obtain a better person, since ai was last on their preference list. Only person
+        having worse partners are in A, hence instability if exists must be in A.
 
-    if ai prefer ,say x over bi+1, then there are three conditions possible.
-    a)  ai and x were partners in M, hence x == bi. Since bi prefer ai-1 over ai, hence no unstability.
-    b)  ai also prefer x to bi, in which case x is not in ai's reduced preference list. In this case, x must
-    have rejected ai before by receiving a better proposal from someone elese. hence can't form a stable pairing with ai.
-    c)  ai prefers bi to x, hence x lies between bi and bi+1, but is not present in ai's reduced preference list. Even in that
-    case, x must have received a better proposal than ai, then will not be willing to pair with ai.
+        if ai prefer ,say x over bi+1, then there are three conditions possible.
+        -  ai and x were partners in M, hence x == bi. Since bi prefer ai-1 over ai, hence no unstability in M'.
+        -  ai also prefer x to bi, in which case x is not in ai's reduced preference list. In this case, by explicitly or col(3.2),
+           x must have rejected ai before by receiving a better proposal from someone else. Hence x is not willing to pair with ai.
+        -  ai prefers bi to x, hence x lies between bi and bi+1, but is not present in ai's reduced preference list. Even in that
+        case, x must have received a better proposal than ai, then will not be willing to pair with ai.`
+        
+    Hence if M is a stable matching , there is no unstability in M'.
 
 Col4.1. *If the original problem instance admits a stable matching, then there is a stable matching
 after applying the reduction operation.*
