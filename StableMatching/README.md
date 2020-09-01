@@ -17,11 +17,9 @@ on right side, and vice-versa.
 There are quite a number of variants of stable matching given by:
 - **Stable Marriage Problem**
 
-
     Stable marriage problem is given by, we are given two set of people of **equal size**. Each person in one set has **strict order of 
     preference** for every person in other set. We want to match each person from left side to **exactly one** person on right side and vice-versa. We want to find a complete stable matching.
-    
-    
+       
 - **Stable Marriage With Indifference**
 
     Stable Marriage is given by, we are given a stable marriage problem, but unlike tradition stable marriage, a person can prefer **two
@@ -29,10 +27,8 @@ There are quite a number of variants of stable matching given by:
     
 - **Stable Roommate Matching**
     
+    In a given instance of the stable-roommates problem (SRP), each of 2n participants ranks the others in strict order of preference. A matching is a set of n disjoint pairs of participants. A matching M in an instance of SRP is stable if there are no two participants x and y, each of whom prefers the other to their partner in M. Such a pair is said to **block** M, or to be a **blocking pair** with respect to M.
     
-    
-
-
 - **Hospital/Resident Problem**
 
 
