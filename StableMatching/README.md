@@ -58,8 +58,8 @@ There are quite a number of variants of stable matching given by:
 
 **Applications:**
 - Stable matching is used to assign medical students to their first hospitals.
-- Stable matching is used by CDN to pair every used with a server, based on their
-proximity. CDN perform matching once in every 10 seconds usually.
+- Stable matching is used by CDN to pair users with a server, based on their
+proximity once in 10s.
 
 
 **Refering:**
