@@ -183,7 +183,4 @@ a stable matching.*
 
 **NOTE:** stable roommate problem solution is quite lengthy to write by hand. It is already avaliable in python's matching library.
 
-
-**Refer:**
-
-to know more, please go through the original paper : *An efficient algorithm for solving stable roommate problem*.
+**Refer:** to know more, please go through the original paper : *An efficient algorithm for solving stable roommate problem*.

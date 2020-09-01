@@ -43,7 +43,7 @@ Let us see how this intiution solves 1) Stable matching 2) complete matching
     Hence in matching M, for every pairing, either codition 2 or 3 fails, so
     unstable matching is found.
 
-*Compelte Matching*
+*Complete Matching*
 
     Let us consider matching M found after running the algorithm
         1) Since every person on left side is paired with exactly one person.
