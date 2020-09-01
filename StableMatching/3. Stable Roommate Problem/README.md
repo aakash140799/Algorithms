@@ -113,7 +113,7 @@ they are not.*
 
         if ai prefer ,say x over bi+1, then there are three conditions possible.
         -  ai and x were partners in M, hence x == bi. Since bi prefer ai-1 over ai, hence no unstability in M'.
-        -  ai also prefer x to bi, in which case x is not in ai's reduced preference list. In this case, by explicitly or col(3.2),
+        -  ai prefer x to bi, in which case x is not in ai's reduced preference list. In this case, by explicitly or col(3.2),
            x must have rejected ai before by receiving a better proposal from someone else. Hence x is not willing to pair with ai.
         -  ai prefers bi to x, hence x lies between bi and bi+1, but is not present in ai's reduced preference list. Even in that
         case, x must have received a better proposal than ai, then will not be willing to pair with ai.`
