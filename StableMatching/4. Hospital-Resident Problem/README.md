@@ -10,6 +10,7 @@ A pair(hi, rj) is said to block matching M, if there exists rk, such that rk is 
 rk is more prefered than a least one assignement of hi.
 
 **Solved By: Gale-Shaply Algorithm**
+
 Each resident ri propose the hospital hi in each preference list. If hi is under-assigned, ri is assigned to hi. Else if
 hi is full, but ri is prefered over a least one assignment of hi, hi rejects its least ranked assignment and accepts ri.
 
@@ -38,6 +39,7 @@ resident is unassigned in every stable matching.
 -   any hospital that is under assigned in a stable matching, remains under-assigned in every stable matching.
 
 **Extension :**
+
 The extension of HR problem may include indifferent preference ties, called HRT. A hospital may be indifferent among a set of residents.
 In this context, three stablity definitions arise : weakly stable, super stable, strongly stable. 
 -   Given an instance of HRT, weakly stable matching may have different sizes and determining a maximum sized weakly stable matching is NP-Hard.
