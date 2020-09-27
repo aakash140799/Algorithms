@@ -43,11 +43,13 @@ There are quite a number of variants of stable matching given by:
     Hosiptal/Resident Couple problem is similar to Hospital/Resident Problem, with one extra condition. We are also given a set of
     one-to-one pairing of doctors. Two doctors in a pair always want to be matched to same hospital. This is similar to condition,
     when a married doctors pair want to get addmitted in same hospital.
+    (NP-Hard proved)
     
     
 - **Assignment Matching**
 
     The problem instance has a number of agents and a number of tasks. Any agent can be assigned to perform any task, incurring some cost that may vary depending on the agent-task assignment. It is required to perform as many tasks as possible by assigning at most one agent to each task and at most one task to each agent, in such a way that the total cost of the assignment is minimized.
+    (Yet to be added)
     
     
 - **Matching With Contracts**

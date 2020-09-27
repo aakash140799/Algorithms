@@ -46,5 +46,9 @@ In this context, three stablity definitions arise : weakly stable, super stable,
 -   On the other hand, a super stable matching need not exist, but it can be found using an O(L) algorithm, if it exists.
 -   In strongly stable matching, a strongly stable matching can be found using O(L^2) algorithm, if it exists.
 
+**Application :**
+-   Used to assigne hospitals/ university to fresh graduate doctors/ students according to their ranking.
+
+
 **Read more :**
 To read more, you may like to go through the original paper : *The Hospital/Residents problem*.
