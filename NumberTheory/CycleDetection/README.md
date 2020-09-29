@@ -1,4 +1,4 @@
-Problem statement : Cycle Detection
+**Problem statement : Cycle Detection**
     
 Let us assume F be a function that maps a finite set S to itself. We are given a starting value x0
 in S, let us perform a series of operations given by
@@ -13,7 +13,8 @@ in set S to an vertex in graph G, and there is an edge between Vi -> Vj, iff xj 
 We are given the starting vertex V0, and we need to find a cycle in the directed graph found
 by travelling from V0.
 
-Applications : 
+**Applications : **
+
 Cycle detection problem is applicable in some fields given by
 -   PseudoRandom number generator
 -   number-therotic algorithm
