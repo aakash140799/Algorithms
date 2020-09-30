@@ -26,7 +26,7 @@ e.g
 
 Let F(x) = (x^2)%7,\
 S = {0,1,2,3,4,5,6}\
-Let us find sequences for different x0\
+Let us find sequences for different x0
 
 x0 = 2,
 x1 = (2 \* 2)%7 = 4, 
