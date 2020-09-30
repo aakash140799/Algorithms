@@ -47,5 +47,5 @@ It turns out that the numbers Xkn defined by equations (1) - (3) approximate to 
             
     
 **Useful Links**\
-The additive congruential random number generator, Roy S.Wikramaratn\
+*The additive congruential random number generator, Roy S.Wikramaratn*\
 http://acorn.wikramaratna.org/index.html
