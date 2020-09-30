@@ -4,7 +4,9 @@ Blum Blum Shub (B.B.S.) is a pseudorandom number generator proposed in 1986 by L
 **Definitions**\
 *Quadratic Residues*
 
-    Let n ∈ N. Then a ∈ Z∗n is called a quadratic residue modulo n if there exists b ∈ Z∗n such that a ≡ b2 (mod n) The set of quadratic residues modulo n is denoted by QRn. Furthermore, QNRn := Z∗n \ QRn is called the set of quadratic non-residues
+    Let n ∈ N. Then a ∈ Z∗n is called a quadratic residue modulo n if there exists b ∈ Z∗n such that a ≡ b2 (mod n). 
+    The set of quadratic residues modulo n is denoted by QRn. Furthermore, QNRn := Z∗n \ QRn is called the set of 
+    quadratic non-residues
 
 *Legendre symbol*
 
