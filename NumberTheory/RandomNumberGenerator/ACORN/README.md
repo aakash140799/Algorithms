@@ -1,7 +1,7 @@
 **ACORN Random Number Generator**\
-ACORN is the Additive COngruential Random Number generator, a family of PRNGs (Pseudo-Random Number Generators) discovered  by Roy Wikramaratna in 1984 and first published in 1989. ACORN has been implemented in various contexts, notably in GSLIB and in the NAG FORTRAN routines. Although progress may appear to have been slow, the author believes that ACORN is as strong as, or better than, most of the commonly used PRNGs.\\
+ACORN is the Additive COngruential Random Number generator, a family of PRNGs (Pseudo-Random Number Generators) discovered  by Roy Wikramaratna in 1984 and first published in 1989. ACORN has been implemented in various contexts, notably in GSLIB and in the NAG FORTRAN routines. Although progress may appear to have been slow, the author believes that ACORN is as strong as, or better than, most of the commonly used PRNGs.
 
-**Mathematical Definition**\
+**Mathematical Definition**
 
     Let the order k and the modulus M (typically an integer power of 2) be finite strictly positive integers, and let Y00 be a strictly positive integer satisfying 0 < Y00 < M.\
 
@@ -20,13 +20,13 @@ ACORN is the Additive COngruential Random Number generator, a family of PRNGs (P
 It turns out that the numbers Xkn defined by equations (1) - (3) approximate to being uniformly distributed on the unit interval in up to k dimensions, provided a few simple constraints on the initial parameter values are satisfied:
 
 -   the modulus M needs to be a large integer (typically a prime power, with powers of 2 offering the most straightforward implementation)
--   the seed Y00 and the modulus should be chosen to be relatively prime (two numbers are said to be relatively prime if they have no prime factors in common, which means that their greatest common divisor is 1; for M a power of two this requires only that the seed take an odd value)\\
+-   the seed Y00 and the modulus should be chosen to be relatively prime (two numbers are said to be relatively prime if they have no prime factors in common, which means that their greatest common divisor is 1; for M a power of two this requires only that the seed take an odd value)
 
         
-        In practice we recommend using k > 10, M = 2^60 (for general application) or M = 2^120 (for demanding applications requiring high-quality pseudo-random numbers that will consistently pass all the tests in standard test packages such as TestU01) and choose any odd value less than M for the seed.\\
+        In practice we recommend using k > 10, M = 2^60 (for general application) or M = 2^120 (for demanding applications requiring high-quality pseudo-random numbers that will consistently pass all the tests in standard test packages such as TestU01) and choose any odd value less than M for the seed.
 
 
-**ACORN algorithm**\
+**ACORN algorithm**
 
         Chose Parameter K
         Chose Parameter M
@@ -44,5 +44,5 @@ It turns out that the numbers Xkn defined by equations (1) - (3) approximate to 
             
     
 **Useful Links**\
-[ACORN website]{http://acorn.wikramaratna.org/index.html}\
-The additive congruential random number generator, Roy S.Wikramaratn\
+[http://acorn.wikramaratna.org/index.html]{ACORN website}\
+The additive congruential random number generator, Roy S.Wikramaratn

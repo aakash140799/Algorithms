@@ -34,11 +34,11 @@ CryptGenRandom\
 Yarrow algorithm\
 Fortuna\
 Blum Blum Shub algorithm\
-Naor-Reingold pseudorandom function\
+Naor-Reingold pseudorandom function
 
 
 The following (non-exhaustive) list of websites claim to provide random numbers generated from a truly random source, with many providing additional randomisation services: 
--   Australian National University[37]
+-   Australian National University
 -   HotBits
 -   Humboldt University of Berlin (registration required)
 -   random.org
