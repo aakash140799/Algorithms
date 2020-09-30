@@ -21,7 +21,9 @@ Cycle detection problem is applicable in some fields given by
 -   deadlock detection in DBMS transactions
 
 
-e.g\ 
+e.g
+
+
 Let F(x) = (x^2)%7,\
 S = {0,1,2,3,4,5,6}\
 Let us find sequences for different x0\
