@@ -3,7 +3,8 @@ ACORN is the Additive COngruential Random Number generator, a family of PRNGs (P
 
 **Mathematical Definition**
 
-    Let the order k and the modulus M (typically an integer power of 2) be finite strictly positive integers, and let Y00 be a strictly positive integer satisfying 0 < Y00 < M.\
+    Let the order k and the modulus M (typically an integer power of 2) be finite strictly positive integers, and let Y00 be a strictly positive 
+    integer satisfying 0 < Y00 < M.
 
     Let   Ym0   m = 1, ..., k   be an arbitrary set of positive integer initial values each satisfying 0 ≤ Ym0 < M .
     
@@ -23,7 +24,9 @@ It turns out that the numbers Xkn defined by equations (1) - (3) approximate to 
 -   the seed Y00 and the modulus should be chosen to be relatively prime (two numbers are said to be relatively prime if they have no prime factors in common, which means that their greatest common divisor is 1; for M a power of two this requires only that the seed take an odd value)
 
         
-        In practice we recommend using k > 10, M = 2^60 (for general application) or M = 2^120 (for demanding applications requiring high-quality pseudo-random numbers that will consistently pass all the tests in standard test packages such as TestU01) and choose any odd value less than M for the seed.
+        In practice we recommend using k > 10, M = 2^60 (for general application) or M = 2^120 (for demanding applications requiring high-quality
+        pseudo-random numbers that will consistently pass all the tests in standard test packages such as TestU01) and choose any odd value less 
+        than M for the seed.
 
 
 **ACORN algorithm**
@@ -44,5 +47,5 @@ It turns out that the numbers Xkn defined by equations (1) - (3) approximate to 
             
     
 **Useful Links**\
-[http://acorn.wikramaratna.org/index.html]{ACORN website}\
+http://acorn.wikramaratna.org/index.html \\
 The additive congruential random number generator, Roy S.Wikramaratn
