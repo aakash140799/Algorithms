@@ -1,5 +1,4 @@
-**Problem statement : Cycle Detection**
-    
+**Cycle Detection**\
 Let us assume F be a function that maps a finite set S to itself. We are given a starting value x0
 in S, let us perform a series of operations given by
 
@@ -13,22 +12,23 @@ in set S to an vertex in graph G, and there is an edge between Vi -> Vj, iff xj 
 We are given the starting vertex V0, and we need to find a cycle in the directed graph found
 by travelling from V0.
 
-**Applications :**
 
+**Applications**\
 Cycle detection problem is applicable in some fields given by
 -   PseudoRandom number generator
 -   number-therotic algorithm
 -   collisions in cryptographic hash functions
 -   deadlock detection in DBMS transactions
 
-e.g 
 
-Let F(x) = (x^2)%7,
-S = {0,1,2,3,4,5,6}
+e.g
 
+
+Let F(x) = (x^2)%7,\
+S = {0,1,2,3,4,5,6}\
 Let us find sequences for different x0
 
-x0 = 2, 
+x0 = 2,
 x1 = (2 \* 2)%7 = 4, 
 x2 = (4 \* 4)%7 = 2, 
 cycle found x0 == x2
